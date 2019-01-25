@@ -2,7 +2,6 @@
   "name": "js-rpn",
   "version": "1.0.0",
   "description": "Javascript版本逆波兰算法",
-  "main": "index.js",
   "author": "Zubin",
   "license": "MIT",
   "scripts": {
