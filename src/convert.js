@@ -1,5 +1,3 @@
-// Create by Zubin on 2019-01-23 18:18:02
-
 const operatorRand = {
   '+': 1,
   '-': 1,
