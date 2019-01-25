@@ -1,0 +1,40 @@
+{
+  "name": "js-rpn",
+  "version": "1.0.0",
+  "description": "Javascript版本逆波兰算法",
+  "main": "index.js",
+  "author": "Zubin",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src/*",
+    "test": "jest",
+    "build": "npm run clear && babel src -d build",
+    "watch": "npm run clear && babel src -s -w -d build",
+    "clean": "rimraf build & rimraf coverage",
+    "ci": "npm run lint && npm run test -- --coverage",
+    "codecov": "codecov"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zubincheung/js-rpn.git"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.13",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "codecov": "^3.1.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jest": "^22.1.3",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^23.6.0",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^2.6.3"
+  }
+}

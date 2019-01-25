@@ -1,0 +1,10 @@
+# build file
+build
+dist
+
+# node modules
+node_modules
+
+# test file
+test
+__test__
