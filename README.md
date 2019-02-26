@@ -3,7 +3,6 @@
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
 [![David deps][david-image]][david-url]
-[![Known Vulnerabilities][snyk-image]][snyk-url]
 
 [travis-image]: https://img.shields.io/travis/zubincheung/js-rpn.svg?style=flat-square
 [travis-url]: https://travis-ci.org/zubincheung/js-rpn
@@ -11,9 +10,6 @@
 [codecov-url]: https://codecov.io/github/zubincheung/js-rpn?branch=master
 [david-image]: https://img.shields.io/david/zubincheung/js-rpn.svg?style=flat-square
 [david-url]: https://david-dm.org/zubincheung/js-rpn
-[snyk-image]: https://snyk.io/test/npm/js-rpn/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/js-rpn
-
 
 > Javascript 版本逆波兰算法
 
