@@ -18,7 +18,7 @@ function compute(leftNum, rightNum, operator) {
 }
 /**
  * 计算逆波兰表达式
- * @param {string[]} reversePolishArr 逆波兰表达式
+ * @param {(number|string)[]} reversePolishArr 逆波兰表达式
  */
 export function count(reversePolishArr) {
   if (isNotOrEmptyArray(reversePolishArr)) return 0;

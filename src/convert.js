@@ -9,7 +9,7 @@ const operatorRand = {
 
 /**
  * 中缀表达式转换成逆波兰表达式
- * @param {string[]} str 中缀表达式
+ * @param {(number|string)[]} inputArr 中缀表达式
  */
 export function convert(inputArr) {
   if (isNotOrEmptyArray(inputArr)) return [];
