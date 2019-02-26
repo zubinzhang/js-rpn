@@ -1,3 +1,5 @@
+import { isNotOrEmptyArray } from './utils';
+
 const operatorRand = {
   '+': 1,
   '-': 1,
@@ -10,12 +12,12 @@ const operatorRand = {
  * @param {string[]} str 中缀表达式
  */
 export function convert(inputArr) {
-  if (!Array.isArray(inputArr) || inputArr.length === 0) return [];
+  if (isNotOrEmptyArray(inputArr)) return [];
 
   const operatorArr = [];
   const outputArr = [];
 
-  inputArr.forEach(input => {
+  for (const input of inputArr) {
     if (!Number.isNaN(Number(input))) {
       // 如果是数字，只接输出
       outputArr.push(input);
@@ -47,7 +49,7 @@ export function convert(inputArr) {
         }
       }
     }
-  });
+  }
 
   // 输入循环结束，如果运算符栈不为空，循环输出
   while (operatorArr.length > 0) {

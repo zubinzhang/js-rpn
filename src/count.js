@@ -1,23 +1,27 @@
+import { isNotOrEmptyArray } from './utils';
+
 function compute(leftNum, rightNum, operator) {
+  let result = 0;
+  // eslint-disable-next-line default-case
   switch (operator) {
     case '+':
-      return leftNum + rightNum;
+      result = leftNum + rightNum; break;
     case '-':
-      return leftNum - rightNum;
+      result = leftNum - rightNum; break;
     case '*':
-      return leftNum * rightNum;
-    default:
-      // 除法
-      return leftNum / rightNum;
+      result = leftNum * rightNum; break;
+    case '/':
+      result = leftNum / rightNum; break;
   }
-}
 
+  return result;
+}
 /**
  * 计算逆波兰表达式
- * @param {string} str 逆波兰表达式
+ * @param {string[]} reversePolishArr 逆波兰表达式
  */
 export function count(reversePolishArr) {
-  if (!Array.isArray(reversePolishArr) || reversePolishArr.length === 0) return 0;
+  if (isNotOrEmptyArray(reversePolishArr)) return 0;
 
   if (!reversePolishArr.every(input => !isNaN(input) || ['+', '-', '*', '/'].includes(input))) {
     throw new Error(`无效的表达式：${reversePolishArr.join(',')}`);
@@ -25,7 +29,7 @@ export function count(reversePolishArr) {
 
   const tmpArr = [];
 
-  reversePolishArr.forEach(input => {
+  for (const input of reversePolishArr) {
     if (!Number.isNaN(Number(input))) {
       // 数字接直接push
       tmpArr.push(Number(input));
@@ -40,7 +44,7 @@ export function count(reversePolishArr) {
 
       tmpArr.push(compute(num2, num1, input));
     }
-  });
+  }
 
   return Number(tmpArr[0].toFixed(3));
 }
