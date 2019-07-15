@@ -22,8 +22,11 @@
     "url": "git+https://github.com/zubincheung/js-rpn.git"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.13",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@types/jest": "^24.0.15",
     "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "codecov": "^3.5.0",
     "eslint": "^5.16.0",
